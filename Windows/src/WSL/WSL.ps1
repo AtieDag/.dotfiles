@@ -241,37 +241,37 @@ function Set-Zsh-As-Default-In-Ubuntu {
 }
 
 choco install -y "wsl2" --params "/Version:2 /Retry:true";
-choco install -y "wsl-ubuntu-2004" --params "/InstallRoot:true" --execution-timeout 3600;
+# choco install -y "wsl-ubuntu-2004" --params "/InstallRoot:true" --execution-timeout 3600;
 
-Update-Ubuntu-Packages-Repository;
-Update-Ubuntu-Packages;
+# Update-Ubuntu-Packages-Repository;
+# Update-Ubuntu-Packages;
 
-Install-Ubuntu-Package -PackageName "curl";
-Install-Ubuntu-Package -PackageName "neofetch";
-Install-Ubuntu-Package -PackageName "git";
-Install-Ubuntu-Package -PackageName "vim";
-Install-Ubuntu-Package -PackageName "zsh";
-Install-Ubuntu-Package -PackageName "make";
-Install-Ubuntu-Package -PackageName "g++";
-Install-Ubuntu-Package -PackageName "gcc";
+# Install-Ubuntu-Package -PackageName "curl";
+# Install-Ubuntu-Package -PackageName "neofetch";
+# Install-Ubuntu-Package -PackageName "git";
+# Install-Ubuntu-Package -PackageName "vim";
+# Install-Ubuntu-Package -PackageName "zsh";
+# Install-Ubuntu-Package -PackageName "make";
+# Install-Ubuntu-Package -PackageName "g++";
+# Install-Ubuntu-Package -PackageName "gcc";
 
-Set-Git-Configuration-In-Ubuntu;
+# Set-Git-Configuration-In-Ubuntu;
 
-Install-VSCode-Extensions-In-WSL;
+# Install-VSCode-Extensions-In-WSL;
 
-Install-Volta-In-Ubuntu;
-Install-Nodejs-Packages-In-Ubuntu;
+# Install-Volta-In-Ubuntu;
+# Install-Nodejs-Packages-In-Ubuntu;
 
-Install-Golang-In-Ubuntu;
-Install-Hugo-In-Ubuntu;
+# Install-Golang-In-Ubuntu;
+# Install-Hugo-In-Ubuntu;
 
-Install-Plug-Vim-In-Ubuntu;
-Copy-Initial-Vimrc-In-Ubuntu;
-Install-Vim-Plugins-In-Ubuntu;
-Copy-Final-Vimrc-In-Ubuntu;
+# Install-Plug-Vim-In-Ubuntu;
+# Copy-Initial-Vimrc-In-Ubuntu;
+# Install-Vim-Plugins-In-Ubuntu;
+# Copy-Final-Vimrc-In-Ubuntu;
 
-Install-OhMyZsh-In-Ubuntu;
-Install-OhMyZsh-Theme-In-Ubuntu;
-Install-OhMyZsh-Functions-In-Ubuntu;
-Set-OhMyZsh-Configuration-In-Ubuntu;
-Set-Zsh-As-Default-In-Ubuntu;
+# Install-OhMyZsh-In-Ubuntu;
+# Install-OhMyZsh-Theme-In-Ubuntu;
+# Install-OhMyZsh-Functions-In-Ubuntu;
+# Set-OhMyZsh-Configuration-In-Ubuntu;
+# Set-Zsh-As-Default-In-Ubuntu;

@@ -156,8 +156,8 @@ function Rename-PC {
 Disable-WindowsFeature "Internet-Explorer-Optional-amd64" "Internet Explorer";
 Disable-WindowsFeature "Printing-XPSServices-Features" "Microsoft XPS Document Writer";
 Disable-WindowsFeature "WorkFolders-Client" "WorkFolders-Client";
+Disable-WindowsFeature "WindowsMediaPlayer" "Windows Media Player";
 Enable-WindowsFeature "Containers-DisposableClientVM" "Windows Sandbox";
-Enable-WindowsFeature "WindowsMediaPlayer" "Windows Media Player";
 
 Uninstall-AppPackage "Microsoft.Getstarted";
 Uninstall-AppPackage "Microsoft.GetHelp";

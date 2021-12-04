@@ -8,23 +8,23 @@ Open any Windows PowerShell host console **(Except Windows Terminal)** with admi
 
 ```Powershell
 $GitHubRepositoryAuthor = "AtieDag"; `
-$GitHubRepositoryName   = ".DOTFILES/Windows"; `
+$GitHubRepositoryName   = ".dotfiles"; `
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass; `
-Invoke-Expression (Invoke-RestMethod -Uri "https://raw.githubusercontent.com/${GitHubRepositoryAuthor}/${GitHubRepositoryName}/main/Download.ps1");
+Invoke-Expression (Invoke-RestMethod -Uri "https://raw.githubusercontent.com/${GitHubRepositoryAuthor}/${GitHubRepositoryName}/master/Windows/Download.ps1");
 ```
 
 ## What does?
 
 This dotfiles script does:
 
-- Install Chocolatey.
+- Install Chocolatey [Needed for this to work].
 - Configure Chocolatey to remember installation arguments for future updates.
-- Install Hack Nerd Font.
+<!-- - Install Hack Nerd Font. -->
 - Install Git.
 - Configure Git.
-- Install Vim.
+<!-- - Install Vim.
 - Install Vim-Plug.
-- Install Vim plugins.
+- Install Vim plugins. -->
 - Install Visual Studio Code.
 - Configure Visual Studio Code.
 - Install Visual Studio Code extensions.
@@ -37,9 +37,9 @@ This dotfiles script does:
 - Configure Windows Terminal.
 - Install Notepad++.
 - Configure Notepad++.
-- Install .NET SDK.
+<!-- - Install .NET SDK. -->
 - Enable Windows Subsystem for Linux.
-- Install Ubuntu 20.04 LTS in WSL.
+<!-- - Install Ubuntu 20.04 LTS in WSL.
   - Install curl.
   - Install Neofetch.
   - Configure Git in Ubuntu.
@@ -59,7 +59,7 @@ This dotfiles script does:
   - Install Zsh in Ubuntu.
   - Install Oh My Zsh in Ubuntu.
   - Install Zsh-Autosuggestions for Oh My Zsh in Ubuntu.
-  - Configure Oh My Zsh in Ubuntu.
+  - Configure Oh My Zsh in Ubuntu. -->
 - Install Docker Desktop.
 - Configure File Explorer:
   - Show file extensions.
@@ -85,89 +85,89 @@ This dotfiles script does:
 
 ### Terminal Profile
 
-| Alias | Description              | PowerShell | Zsh |
-| ----- | ------------------------ | ---------- | --- |
-| edt   | Edit terminal profile    | ✅         | ✅  |
-| src   | Refresh terminal profile | ✅         | ✅  |
+| Alias | Description              
+| ----- | ------------------------ 
+| edt   | Edit terminal profile    
+| src   | Refresh terminal profile 
 
 ### Directories
 
-| Alias | Description                      | PowerShell | Zsh |
-| ----- | -------------------------------- | ---------- | --- |
-| mkcd  | Create folder and navigate to it | ✅         | ✅  |
-| trash | Open the recycle bin folder      | ✅         |     |
+| Alias | Description                      
+| ----- | -------------------------------- 
+| mkcd  | Create folder and navigate to it 
+| trash | Open the recycle bin folder      
 
 ### System Maintenance
 
-| Alias  | Description             | PowerShell | Zsh |
-| ------ | ----------------------- | ---------- | --- |
-| updsys | Update apps and system. | ✅         | ✅  |
+| Alias  | Description              
+| ------ | -----------------------  
+| updsys | Update apps and system.  
 
 ### Environment Variables
 
-| Alias | Description                                    | PowerShell | Zsh |
-| ----- | ---------------------------------------------- | ---------- | --- |
-| pathl | List the content of PATH environment variables | ✅         | ✅  |
+| Alias | Description                                     
+| ----- | ----------------------------------------------  
+| pathl | List the content of PATH environment variables  
 
 ### Git
 
-| Alias | Description                                                      | PowerShell | Zsh |
-| ----- | ---------------------------------------------------------------- | ---------- | --- |
-| gcb   | git checkout creating new branch                                 | ✅         | ✅  |
-| ga    | git add                                                          | ✅         | ✅  |
-| gaa   | git add all                                                      | ✅         | ✅  |
-| gsc   | git clone, load submodules and navigate to the repository folder | ✅         | ✅  |
-| gst   | git status                                                       | ✅         | ✅  |
-| gcmsg | git commit message                                               | ✅         | ✅  |
-| ggp   | git push origin current_branch                                   | ✅         | ✅  |
-| glg   | git log                                                          | ✅         | ✅  |
-| gsrlc | Git soft reset last commit                                       | ✅         | ✅  |
-| ghrlc | Git hard reset last commit                                       | ✅         | ✅  |
+| Alias | Description                                                      
+| ----- | ---------------------------------------------------------------- 
+| gcb   | git checkout creating new branch                                 
+| ga    | git add                                                          
+| gaa   | git add all                                                      
+| gsc   | git clone, load submodules and navigate to the repository folder 
+| gst   | git status                                                       
+| gcmsg | git commit message                                               
+| ggp   | git push origin current_branch                                   
+| glg   | git log                                                          
+| gsrlc | Git soft reset last commit                                       
+| ghrlc | Git hard reset last commit                                       
 
 ### Vim
 
-| Alias     | Description               | PowerShell | Zsh |
-| --------- | ------------------------- | ---------- | --- |
-| editvim   | Edit .vimrc file          | ✅         | ✅  |
-| sourcevim | Refresh Vim configuration |            | ✅  |
+| Alias     | Description                
+| --------- | -------------------------  
+| editvim   | Edit .vimrc file           
+| sourcevim | Refresh Vim configuration  
 
 ### Docker
 
-| Alias | Description                        | PowerShell | Zsh |
-| ----- | ---------------------------------- | ---------- | --- |
-| dpl   | Docker pull                        | ✅         | ✅  |
-| dlc   | List the Docker containers working | ✅         | ✅  |
-| dlca  | List all the Docker containers     | ✅         | ✅  |
-| dli   | List all the Docker images         | ✅         | ✅  |
-| dsc   | Stop Docker container              | ✅         | ✅  |
-| drc   | Delete Docker container            | ✅         | ✅  |
-| dri   | Delete Docker image                | ✅         | ✅  |
+| Alias | Description                         
+| ----- | ----------------------------------  
+| dpl   | Docker pull                         
+| dlc   | List the Docker containers working  
+| dlca  | List all the Docker containers      
+| dli   | List all the Docker images          
+| dsc   | Stop Docker container               
+| drc   | Delete Docker container             
+| dri   | Delete Docker image                 
 
 ### NPM
 
-| Alias | Description                       | PowerShell | Zsh |
-| ----- | --------------------------------- | ---------- | --- |
-| ngl   | List global NPM packages          |            | ✅  |
-| ngo   | List outdated global NPM packages |            | ✅  |
-| ngu   | Update global NPM package         |            | ✅  |
+| Alias | Description                        
+| ----- | ---------------------------------  
+| ngl   | List global NPM packages           
+| ngo   | List outdated global NPM packages  
+| ngu   | Update global NPM package          
 
 ### Yarn
 
-| Alias | Description                                   | PowerShell | Zsh |
-| ----- | --------------------------------------------- | ---------- | --- |
-| yi    | Install Yarn package                          |            | ✅  |
-| yid   | Install Yarn package as dev dependency        |            | ✅  |
-| yl    | List all Yarn packages locally installed      |            | ✅  |
-| ylo   | List outdated Yarn packages locally installed |            | ✅  |
-| yu    | Update Yarn package                           |            | ✅  |
-| yua   | Upgrade all Yarn packages                     |            | ✅  |
-| yr    | Remove Yarn package                           |            | ✅  |
+| Alias | Description                                    
+| ----- | ---------------------------------------------  
+| yi    | Install Yarn package                           
+| yid   | Install Yarn package as dev dependency         
+| yl    | List all Yarn packages locally installed       
+| ylo   | List outdated Yarn packages locally installed  
+| yu    | Update Yarn package                            
+| yua   | Upgrade all Yarn packages                      
+| yr    | Remove Yarn package                            
 
 ### NestJS
 
-| Alias   | Description                      | PowerShell | Zsh |
-| ------- | -------------------------------- | ---------- | --- |
-| nestnew | Create a new project with NestJS |            | ✅  |
+| Alias   | Description                       
+| ------- | --------------------------------  
+| nestnew | Create a new project with NestJS  
 
 ### Go
 
@@ -177,11 +177,11 @@ This dotfiles script does:
 
 ### Web search from the console
 
-| Alias         | Example                    | PowerShell | Zsh |
-| ------------- | -------------------------- | ---------- | --- |
-| bing          | bing "Windows 11"          | ✅         | ✅  |
-| google        | google "Windows 11"        | ✅         | ✅  |
-| duckduckgo    | duckduckgo "Windows 11"    | ✅         | ✅  |
-| youtube       | youtube "Windows 11"       | ✅         | ✅  |
-| github        | github "Windows 11"        | ✅         | ✅  |
-| stackoverflow | stackoverflow "Windows 11" | ✅         | ✅  |
+| Alias         | Example                     
+| ------------- | --------------------------  
+| bing          | bing "Windows 11"           
+| google        | google "Windows 11"         
+| duckduckgo    | duckduckgo "Windows 11"     
+| youtube       | youtube "Windows 11"        
+| github        | github "Windows 11"         
+| stackoverflow | stackoverflow "Windows 11"  

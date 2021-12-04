@@ -1,12 +1,8 @@
-################################################################################
-#                                Initial Commands                              #
-################################################################################
+# Initial Commands 
 
 Clear-Host;
 
-################################################################################
-#                                  Oh my Posh!                                 #
-################################################################################
+#                       Oh my Posh!
 
 Import-Module "oh-my-posh";
 Import-Module "posh-git";
@@ -14,9 +10,9 @@ Import-Module "Terminal-Icons";
 Import-Module "PSReadLine";
 Set-PoshPrompt -Theme "~/.oh-my-posh-custom-theme.omp.json";
 
-################################################################################
-#                                  PSReadLine                                  #
-################################################################################
+
+#                       PSReadLine
+
 
 Set-PSReadlineOption -BellStyle "None";
 Set-PSReadLineOption -PredictionSource "History";
@@ -26,19 +22,19 @@ Set-PSReadLineOption -Colors @{
   "InlinePrediction" = [ConsoleColor]::DarkGray;
 }
 
-################################################################################
-#                                  Chocolatey                                  #
-################################################################################
 
-# Chocolatey profile
+#                       Chocolatey#
+
+
+# Profile
 $ChocolateyProfile = Join-Path -Path $env:ChocolateyInstall -ChildPath "helpers" | Join-Path -ChildPath "chocolateyProfile.psm1";
 if (Test-Path($ChocolateyProfile)) {
   Import-Module $ChocolateyProfile;
 };
 
-################################################################################
-#                        WindowsTerminal Profile Aliases                       #
-################################################################################
+
+#                       WindowsTerminal Profile Aliases
+
 
 function Invoke-Edit-WindowsTerminal-Profile {
   vim $PROFILE;
@@ -50,9 +46,9 @@ function Invoke-Refresh-WindowsTerminal-Profile {
 };
 Set-Alias -Name "src" -Value "Invoke-Refresh-WindowsTerminal-Profile";
 
-################################################################################
-#                              Directories Aliases                             #
-################################################################################
+
+#                       Directories Aliases 
+
 
 function Set-Location-One-Time { Set-Location ".."; };
 Set-Alias -Name ".." -Value "Set-Location-One-Time";
@@ -76,9 +72,8 @@ function Open-Recycle-Bin {
 }
 Set-Alias -Name "trash" -Value "Open-Recycle-Bin";
 
-################################################################################
-#                          System Maintenance Aliases                          #
-################################################################################
+
+#                       System Maintenance Aliases 
 
 function Update-System {
   Update-Module;
@@ -90,18 +85,18 @@ function Update-System {
 };
 Set-Alias -Name "updsys" -Value "Update-System";
 
-################################################################################
-#                         Environment Variables Aliases                        #
-################################################################################
+
+#                       Environment Variables Aliases
+
 
 function Invoke-List-Path {
   $env:Path -split ';';
 };
 Set-Alias -Name "pathl" -Value "Invoke-List-Path";
 
-################################################################################
-#                                  Git Aliases                                 #
-################################################################################
+
+#                       Git Aliases 
+
 
 function Invoke-Git-Super-Clone {
   param($repositoryName);
@@ -164,18 +159,17 @@ function Invoke-Git-Hard-Reset-Last-Commit {
 };
 Set-Alias -Name "ghrlc" -Value "Invoke-Git-Hard-Reset-Last-Commit";
 
-################################################################################
-#                                  Vim Aliases                                 #
-################################################################################
+
+#                       Vim Aliases
+
 
 function Invoke-Edit-Vimrc {
   vim ~/.vimrc;
 };
 Set-Alias -Name "editvim" -Value "Invoke-Edit-Vimrc";
 
-################################################################################
-#                                Docker Aliases                                #
-################################################################################
+
+#                       Docker Aliases  
 
 # Download Docker image
 function Invoke-Docker-Pull {
