@@ -13,7 +13,7 @@ Open any Windows PowerShell host console **(Except Windows Terminal)** with admi
 $GitHubRepositoryAuthor = "AtieDag"; `
 $GitHubRepositoryName   = ".dotfiles"; `
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass; `
-Invoke-Expression (Invoke-RestMethod -Uri "https://raw.githubusercontent.com/${GitHubRepositoryAuthor}/${GitHubRepositoryName}/master/Windows/Download.ps1");
+Invoke-Expression (Invoke-RestMethod -Uri "https://raw.githubusercontent.com/${GitHubRepositoryAuthor}/${GitHubRepositoryName}/master/Download.ps1");
 ```
 
 ## What does?
