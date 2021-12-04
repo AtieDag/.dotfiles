@@ -28,3 +28,14 @@ code --install-extension "esbenp.prettier-vscode";
 code --install-extension "ms-vscode-remote.remote-containers";
 code --install-extension "ms-vscode-remote.remote-wsl";
 code --install-extension "jock.svg";
+# "ms-azuretools.vscode-docker",
+# "ms-vsliveshare.vsliveshare-pack",
+# "ms-python.python",
+# "ms-python.vscode-pylance",
+# "golang.go",
+# "ms-vscode.cpptools",
+# "ms-vscode.cpptools-extension-pack",
+# "eg2.vscode-npm-script",
+# "dbaeumer.vscode-eslint",
+# "ms-vscode.cmake-tools",
+# "ms-ossdata.vscode-postgresql",

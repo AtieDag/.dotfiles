@@ -1,5 +1,6 @@
 $GitHubRepositoryUri = "https://github.com/${GitHubRepositoryAuthor}/${GitHubRepositoryName}/archive/refs/heads/main.zip";
 
+
 $DotfilesFolder = Join-Path -Path $HOME -ChildPath ".dotfiles";
 $ZipRepositoryFile = Join-Path -Path $DotfilesFolder -ChildPath "${GitHubRepositoryName}-main.zip";
 $DotfilesWorkFolder = Join-Path -Path $DotfilesFolder -ChildPath "${GitHubRepositoryName}-main" | Join-Path -ChildPath "src";
@@ -8,12 +9,10 @@ $DownloadResult = $FALSE;
 
 # Request custom values
 $ComputerName = Read-Host -Prompt "Input the new computer name here";
-
-$GitUserName = Read-Host -Prompt "Input your Git user name here";
-
+$GitUserName  = Read-Host -Prompt "Input your Git user name here";
 $GitUserEmail = Read-Host -Prompt "Input your Git user email here";
-
 $ValidDisks = Get-PSDrive -PSProvider "FileSystem" | Select-Object -ExpandProperty "Root";
+
 do {
   Write-Host "Choose the location of your development workspace:" -ForegroundColor "Green";
   Write-Host $ValidDisks -ForegroundColor "Green";

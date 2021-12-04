@@ -7,8 +7,8 @@ Repeatable, reboot resilient Dotfiles script to setup a development environment 
 Open any Windows PowerShell host console **(Except Windows Terminal)** with administrator rights and run:
 
 ```Powershell
-$GitHubRepositoryAuthor = "JMOrbegoso"; `
-$GitHubRepositoryName = "Dotfiles-for-Windows-11"; `
+$GitHubRepositoryAuthor = "AtieDag"; `
+$GitHubRepositoryName   = ".DOTFILES/Windows"; `
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass; `
 Invoke-Expression (Invoke-RestMethod -Uri "https://raw.githubusercontent.com/${GitHubRepositoryAuthor}/${GitHubRepositoryName}/main/Download.ps1");
 ```
