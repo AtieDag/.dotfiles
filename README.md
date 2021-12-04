@@ -1,5 +1,8 @@
 # Dotfiles for Microsoft Windows 11
 
+Credit to JM Orbegoso for this great work.
+https://github.com/JMOrbegoso/Dotfiles-for-Windows-11
+
 Repeatable, reboot resilient Dotfiles script to setup a development environment in Microsoft Windows 11.
 
 ## Usage
