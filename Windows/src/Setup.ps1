@@ -1,15 +1,13 @@
-$GitHubRepositoryAuthor = "JMOrbegoso";
-$GitHubRepositoryName = "Dotfiles-for-Windows-11";
-$DotfilesFolder = Join-Path -Path $HOME -ChildPath ".dotfiles";
-$DotfilesWorkFolder = Join-Path -Path $DotfilesFolder -ChildPath "${GitHubRepositoryName}-main" | Join-Path -ChildPath "src";
-$DotfilesHelpersFolder = Join-Path -Path $DotfilesWorkFolder -ChildPath "Helpers";
-$DotfilesConfigFile = Join-Path -Path $DotfilesFolder -ChildPath "${GitHubRepositoryName}-main" | Join-Path -ChildPath "config.json";
+$DotfilesFolder         = Join-Path -Path $HOME -ChildPath ".dotfiles";
+$DotfilesWorkFolder     = Join-Path -Path $DotfilesFolder -ChildPath "${GitHubRepositoryName}-main" | Join-Path -ChildPath "src";
+$DotfilesHelpersFolder  = Join-Path -Path $DotfilesWorkFolder -ChildPath "Helpers";
+$DotfilesConfigFile     = Join-Path -Path $DotfilesFolder -ChildPath "${GitHubRepositoryName}-main" | Join-Path -ChildPath "config.json";
 
-Write-Host "Welcome to Dotfiles for Microsoft Windows 11" -ForegroundColor "Yellow";
-Write-Host "Please don't use your device while the script is running." -ForegroundColor "Yellow";
+Write-Host "Welcome to Dotfiles for Microsoft Windows 11"               -ForegroundColor "Yellow";
+Write-Host "Please don't use your device while the script is running."  -ForegroundColor "Yellow";
+Write-Host "Loading helpers:"                                           -ForegroundColor "Green";
 
 # Load helpers
-Write-Host "Loading helpers:" -ForegroundColor "Green";
 $DotfilesHelpers = Get-ChildItem -Path "${DotfilesHelpersFolder}\*" -Include *.ps1 -Recurse;
 foreach ($DotfilesHelper in $DotfilesHelpers) {
   . $DotfilesHelper;
