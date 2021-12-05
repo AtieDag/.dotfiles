@@ -8,3 +8,5 @@ function Set-Git-Configuration {
 
 choco install -y "git" --params "/NoAutoCrlf /WindowsTerminal /NoShellIntegration /SChannel";
 Set-Git-Configuration;
+
+
